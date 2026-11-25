@@ -64,16 +64,47 @@
 
 
 // uuid package
-const { v4: uuidv4 } = require('uuid');
-const random = uuidv4();
-console.log('random:', random);
+// const { v4: uuidv4 } = require('uuid');
+// const random = uuidv4();
+// console.log('random:', random);
 
 
 
-// chalk package
-const chalk = require('chalk');
-const log = console.log;
-//log(chalk.blue('Hello ') + random + chalk.red('!'));
-//log(chalk.blue(`uuid creates: ${random}`));
-log(chalk.red(`uuid creates: ${random}`));
+// // chalk package
+// const chalk = require('chalk');
+// const log = console.log;
+// //log(chalk.blue('Hello ') + random + chalk.red('!'));
+// //log(chalk.blue(`uuid creates: ${random}`));
+// log(chalk.red(`uuid creates: ${random}`));
+
+
+
 // Module package FILE
+// const calculate = require('./hisob.js');
+
+// console.log("Kopaytirish:", calculate.kopaytirish(5, 10));
+// console.log("\nBolish:", calculate.bolish(10, 5));
+// console.log("\nQoshish:", calculate.qoshish(5, 10));
+// console.log("\nAyirish:", calculate.ayirish(10, 5));
+
+
+
+// console.log(require('module').wrapper);
+// console.log(arguments);
+
+
+
+const Account = require("./account.js");
+Account.tellMeAboutClass();
+Account.tellMeTime();
+// Account.giveMeDetails();
+console.log("=====================================");
+
+const myAccount = new Account("Mark", 5000000, 321435255);
+myAccount.giveMeDetails();
+
+myAccount.makeDeposit(1000000);
+
+// bugatti chiyron 2.4 mln usd
+myAccount.withdrawMoney(2400000);
+myAccount.makeDeposit(200000);
